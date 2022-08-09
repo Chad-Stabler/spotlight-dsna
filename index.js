@@ -1,4 +1,10 @@
-class Stack {}
+class Stack {
+    #list = [];
+
+    constructor(initialLost) {
+        this.#list = initialList;
+    }
+}
 
 class Queue {}
 
