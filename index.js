@@ -1,17 +1,49 @@
 class Stack {
   #list = [];
 
-  constructor(intialList) {
-    if (intialList) this.#list = intialList;
+  constructor(initialList) {
+    if (initialList) this.#list = initialList;
   }
 
   push(item) {
-    const list = this.#list;
-    list.push(item);
-    return new Stack(list);
+    this.#list.push(item);
+  }
+
+  peek() {
+    return this.#list[this.#list.length - 1];
+  }
+
+  pop() {
+    this.#list.pop();
   }
 }
 
-class Queue {}
+class Queue {
+  #list = [];
 
-module.exports = { Stack, Queue }
+  constructor(initialList) {
+    if (initialList) this.#list = initialList;
+  }
+
+  enqueue(item) {
+    this.#list.push(item);
+  }
+
+  dequeue() {
+    return this.#list.
+  }
+
+  get count() {
+    return this.#list.length;
+  }
+
+  get next() {
+    return this.#list[0];
+  }
+
+  peek() {
+    return this.#list[this.#list.length - 1];
+  }
+}
+
+module.exports = { Stack, Queue };
