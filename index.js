@@ -1,8 +1,16 @@
 class Stack {
     #list = [];
 
-    constructor(initialLost) {
-        this.#list = initialList;
+    constructor(initialList) {
+        if (initialList) this.#list = initialList;
+    }
+
+    push(item) {
+        this.#list.push(item);
+    }
+
+    peek() {
+        return this.#list[this.#list.length - 1];
     }
 }
 
